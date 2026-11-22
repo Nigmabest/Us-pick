@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, rgb(186, 83, 112) 15%, rgb(201, 120, 139) 39%, rgb(208, 138, 152) 51%, rgb(215, 156, 165) 63%, rgb(244, 226, 216) 87%);
+    min-height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    max-width: 600px;
+    background-color: rgba(226, 46, 232, 0.647);
+    border-radius: 30px;
+    text-align: center;
+    padding: 40px 30px;
+    box-shadow: 0px 10px 30px rgb(171, 2, 193);
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.flowers {
+    font-size: 50px;
+    animation: FlowerMove 3s infinite;
+}
+
+h1 {
+    color: brown;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+h1+p {
+    color: rgb(116, 18, 54);
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.divider {
+    width: 100px;
+    height: 3px;
+    background-color: rgb(212, 136, 111);
+    margin: 25px auto;
+}
+
+.messege {
+    display: none;
+    background-color: rgb(218, 220, 150);
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 20px;
+}
+
+.messege h2 {
+    color: blueviolet;
+    margin-bottom: 15px;
+}
+
+.messege p {
+    color: rgb(131, 19, 115);
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: rgb(142, 21, 21);
+    color: rgb(219, 23, 23);
+    padding: 16px 30px;
+    font-size: 17px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: blueviolet;
+    transform: scale(1.05);
+}
+
+h2+p {
+    color: rgb(186, 23, 140);
+}
+
+.hearts {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.hearts span {
+    position: absolute;
+    font-size: 25px;
+    top: -30px;
+    animation: fall 6s linear infinite;
+}
+
+@keyframes fall {
+    from {
+        top: -30px;
+    }
+
+    to {
+        top: 100%;
+    }
+}
+
+@keyframes FlowerMove {
+
+    0%,
+    100% {
+        transform: rotate(-5deg)
+    }
+
+    50% {
+        transform: rotate(5deg)
+    }
+
+}
